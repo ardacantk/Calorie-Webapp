@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet", href="static/main.css">
+</head>
+<body>
+<h2>
+    The Calories App
+</h2>
+<p>
+    Fill in the blanks and calculate your daily calories requirement
+</p>
+
+<form action ="/calories_form_page" method="post">
+    {{calorieform.weight.label}} {{calorieform.weight}}
+    <br>
+    {{calorieform.height.label}} {{calorieform.height}}
+    <br>
+    {{calorieform.age.label}} {{calorieform.age}}
+    <br>
+    {{calorieform.country.label}} {{calorieform.country}}
+    <br>
+    {{calorieform.city.label}} {{calorieform.city}}
+    <br>
+    {{calorieform.gender.label}} {{calorieform.gender}}
+    <br>
+
+    {{calorieform.button}}
+    <br>
+    {% if result %}
+    It is {{temperature}}°C in {{city}}. You should get {{calorie}} calories today <br>
+    {% endif %}
+</form>
+</body>
+</html>
